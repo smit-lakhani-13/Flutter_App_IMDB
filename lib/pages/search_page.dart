@@ -8,7 +8,7 @@ class SearchPage extends StatelessWidget {
         ),
         body: const Center(
             child: Text(
-          'Home',
+          'Search',
           style: TextStyle(fontSize: 60),
         )),
       );
