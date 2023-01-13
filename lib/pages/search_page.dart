@@ -1,3 +1,4 @@
+import 'package:app_imdb/pages/FeaturedMovies.dart';
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatelessWidget {
@@ -8,35 +9,38 @@ class SearchPage extends StatelessWidget {
       //   title: const Text('Search Page'),
       // ),
       body: SingleChildScrollView(
-          child: SafeArea(
-        child: Column(children: [
-          Container(
-            height: 60,
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.symmetric(horizontal: 10),
-            decoration: BoxDecoration(
-              color: Color(0xFF292B37),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Row(children: [
-              Icon(Icons.search, color: Colors.white54, size: 30),
+        child: SafeArea(
+          child: Column(
+            children: [
               Container(
-                width: 300,
-                margin: EdgeInsets.only(left: 5),
-                child: TextFormField(
-                  style: TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Search",
-                      hintStyle: TextStyle(color: Colors.white54)),
+                height: 60,
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                decoration: BoxDecoration(
+                  color: Color(0xFF292B37),
+                  borderRadius: BorderRadius.circular(10),
                 ),
+                child: Row(children: [
+                  Icon(Icons.search, color: Colors.white54, size: 30),
+                  Container(
+                    width: 300,
+                    margin: EdgeInsets.only(left: 5),
+                    child: TextFormField(
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Search",
+                          hintStyle: TextStyle(color: Colors.white54)),
+                    ),
+                  ),
+                ]),
               ),
-              SizedBox(height: 30),
-              // UpcomingWidget(),
-            ]),
-          )
-        ]),
-      )),
+              // SizedBox(height: 40),
+              // FeaturedMovies(),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

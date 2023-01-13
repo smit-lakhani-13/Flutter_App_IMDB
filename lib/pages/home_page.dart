@@ -1,40 +1,34 @@
+import 'package:app_imdb/pages/FeaturedMovies.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.only(top: 80),
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Latest Movies",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 25,
-                      fontWeight: FontWeight.w500,
-                    ),
+      margin: const EdgeInsets.only(top: 85),
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Row(
+              children: [
+                Text(
+                  "Latest Movies",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w500,
                   ),
-                  Text(
-                    "See All",
-                    style: TextStyle(
-                      color: Colors.black54,
-                      fontSize: 16,
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
-            SizedBox(height: 15),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(children: [
-                for (int i = 1; i < 7; i++)
+          ),
+          SizedBox(height: 15),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                for (int i = 1; i <= 4; i++)
                   Padding(
                     padding: EdgeInsets.only(left: 10),
                     child: ClipRRect(
@@ -46,10 +40,14 @@ class MainPage extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                  )
-              ]),
-            )
-          ],
-        ));
+                  ),
+              ],
+            ),
+          ),
+          SizedBox(height: 40),
+          FeaturedMovies(),
+        ],
+      ),
+    );
   }
 }
