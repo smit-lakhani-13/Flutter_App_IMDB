@@ -1,8 +1,10 @@
 // import 'package:app_imdb/splash_screen.dart';
+import 'package:app_imdb/pages/carousel_page.dart';
 import 'package:flutter/material.dart';
 
 import '../pages/home_page.dart';
 import '../pages/search_page.dart';
+import '../pages/carousel_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final screens = [
     MainPage(),
     SearchPage(),
+    Carousel(),
   ];
 
   @override
@@ -61,7 +64,11 @@ class _MyHomePageState extends State<MyHomePage> {
               BottomNavigationBarItem(
                 icon: Icon(Icons.search),
                 label: 'Search',
-              )
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.view_carousel),
+                label: 'Carousel',
+              ),
             ]), // This trailing comma makes auto-formatting nicer for build methods.
       );
 }
