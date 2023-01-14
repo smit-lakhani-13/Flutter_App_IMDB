@@ -69,7 +69,7 @@ class FeaturedMovies extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Movie Title Here",
+                                    "Avengers",
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 21,
