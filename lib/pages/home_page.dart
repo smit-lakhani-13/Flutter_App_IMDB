@@ -15,7 +15,7 @@ class MainPage extends StatelessWidget {
                 Text(
                   "Latest Movies",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 30,
                     fontWeight: FontWeight.w500,
                   ),

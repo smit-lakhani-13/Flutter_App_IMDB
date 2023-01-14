@@ -1,6 +1,7 @@
 // import 'package:app_imdb/splash_screen.dart';
-import 'package:app_imdb/pages/carousel_page.dart';
+import 'package:app_imdb/pages/MoviePage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../pages/home_page.dart';
 import '../pages/search_page.dart';
@@ -10,18 +11,26 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Color(0xFF0F111D),
       ),
       // home: SplashScreen(),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: <String, WidgetBuilder>{
+        "moviePage": (context) => MoviePage(),
+      },
     );
   }
 }

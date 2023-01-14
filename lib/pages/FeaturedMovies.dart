@@ -12,7 +12,7 @@ class FeaturedMovies extends StatelessWidget {
               Text(
                 "Featured Movies",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontSize: 30,
                   fontWeight: FontWeight.w500,
                 ),
@@ -27,7 +27,9 @@ class FeaturedMovies extends StatelessWidget {
               children: [
                 for (int i = 5; i <= 8; i++)
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, "moviePage");
+                    },
                     child: Container(
                       width: 190,
                       height: 300,
