@@ -46,10 +46,10 @@ class MoviePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 60),
+                  SizedBox(height: 40),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: Row(
+                    child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Container(
@@ -73,9 +73,10 @@ class MoviePage extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 40, bottom: 40),
-                          height: 80,
-                          width: 80,
+                          margin: EdgeInsets.only(
+                              left: 40, bottom: 20, top: 20, right: 40),
+                          height: 50,
+                          width: 50,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(40),
                             color: Colors.red,
@@ -90,11 +91,11 @@ class MoviePage extends StatelessWidget {
                           child: Icon(
                             Icons.play_arrow,
                             color: Colors.white,
-                            size: 60,
+                            size: 40,
                           ),
                         ),
-                        SizedBox(height: 30),
-                        // MoviePageButtons(),
+                        SizedBox(),
+                        MoviePageButtons(),
                         Padding(
                           padding: EdgeInsets.symmetric(
                               vertical: 20, horizontal: 10),
@@ -102,7 +103,7 @@ class MoviePage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "AVENGERS ENDGAME",
+                                "Avengers Endgame",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 30,
@@ -116,6 +117,7 @@ class MoviePage extends StatelessWidget {
                                   color: Colors.white,
                                   fontSize: 16,
                                 ),
+                                textAlign: TextAlign.justify,
                               ),
                             ],
                           ),
@@ -129,7 +131,6 @@ class MoviePage extends StatelessWidget {
           ),
         ],
       ),
-      // bottomNavigationBar: CustomNavBar(),
     );
   }
 }
